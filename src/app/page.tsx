@@ -1,9 +1,12 @@
 import Image from "next/image";
 import {Button} from "@/components/ui/button";
+import NavBar from "@/app/Header/navBar";
 
 export default function Home() {
   return (
     <div className="">
+      <NavBar />
+      {/* Hero Section */}
       <Hero />
     </div>
   );
@@ -34,20 +37,22 @@ function Hero (){
           src="https://images.unsplash.com/photo-1695019947916-c3e789ba0e2b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGJlbGxlJTIwaW1hZ2UlMjBkZSUyMGxhJTIwbmF0dXJlfGVufDB8fDB8fHww"
           alt="Hero Image"
           fill
-          className="object-cover rounded-br-[200px] md:rounded-br-[300px] h-screen"
+          className="object-cover  h-screen"
           priority
         />
       </div>
 
-      <div className="absolute inset-0 bg-teal-500/20 rounded-br-[200px] md:rounded-br-[300px]" />
+      {/* <div className="absolute inset-0 bg-teal-500/20 rounded-br-[200px] md:rounded-br-[300px]" /> */}
 
-      <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
-        <h1 className="text-3xl md:text-5xl font-bold text-white mb-6">
-          Bold, Investible Solutions for the Wellbeing of People and Planet
-        </h1>
-        <Button className="bg-green-500 hover:bg-green-600 text-white">
-          Contact Us to Get Started
-        </Button>
+      <div className="relative z-10 grid grid-cols-2 items-center justify-center h-full text-center px-24">
+        <div className="grid-cols-1 text-left mt-32">
+          <h1 className="text-3xl md:text-5xl font-bold text-white mb-6">
+            Bold, Investible Solutions for the Wellbeing of People and Planet
+          </h1>
+          <Button className="bg-green-500 hover:bg-green-600 text-white">
+            Contact Us to Get Started
+          </Button>
+        </div>
       </div>
     </div>
   );
