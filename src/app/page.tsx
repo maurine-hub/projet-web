@@ -1,18 +1,20 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import React, { useState } from "react";
-import { Card, CardContent } from "@/components/ui/card";
 import { Users, Target, TrendingUp, Play } from "lucide-react";
+import { Separator } from "@/components/ui/separator";
 
 export default function Home() {
   return (
     <div className="w-full bg-gray-50">
       <Hero />
       <ServicesSection />
-        <QuantifiedVenturesPage />
-        <SolutionsSections />
+      <QuantifiedVenturesPage />
+      <SolutionsSections />
+      <News />
     </div>
   );
 }
@@ -256,7 +258,12 @@ function SolutionsSections() {
   const SolutionCard = ({ title, image }: PropsCard) => (
     <div className="relative group cursor-pointer overflow-hidden transition-transform duration-300 hover:scale-105">
       <div className="aspect-[4/2.5] relative ">
-        <img src={image} alt={title} className="w-full h-full object-cover" />
+        <Image
+          src={image}
+          alt={title}
+          fill
+          className="w-full h-full object-cover"
+        />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
         <div className="absolute inset-0 bg-cyan-600/40"></div>
         <div className="absolute inset-0 flex items-center justify-center p-6">
@@ -271,8 +278,8 @@ function SolutionsSections() {
   return (
     <div className="max-w-11/12 mx-auto py-16">
       <div className="container mx-auto px-4">
-        <div className="mb-20">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-700 text-center mb-12">
+        <div className="mb-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-700 text-center mb-8">
             Climate Finance Solutions
           </h2>
 
@@ -284,7 +291,7 @@ function SolutionsSections() {
         </div>
 
         <div>
-          <h2 className="text-3xl md:text-3xl font-bold text-gray-700 text-center mb-12">
+          <h2 className="text-3xl md:text-3xl font-bold text-gray-700 text-center mb-8">
             Health and Human Services Solutions
           </h2>
 
@@ -299,6 +306,88 @@ function SolutionsSections() {
           <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div>
         </div>
       </div>
+    </div>
+  );
+}
+
+type NewsItem = {
+  image: string;
+  title: string;
+  description: string;
+  link: string;
+};
+
+function News() {
+  const latestNews = [
+    {
+      image:
+        "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&h=250&fit=crop&crop=center",
+      title: "Quantified Ventures Launches New Climate Finance Solutions",
+      description:
+        "Broadband internet and water systems may seem like an odd pairing, but they’re inseparable when it comes to tackling challenges like aging infrastructure, workforce shortages, and the growing impacts of climate change. As affordability becomes an even greater concern, reliable fiber optic broadband offers a transformative solution to modernize water systems, enhance efficiency, and bridge urban-rural divides. ",
+      link: "#",
+    },
+    {
+      image:
+        "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?w=400&h=250&fit=crop&crop=center",
+      title: "Innovative Health Solutions for Community Wellbeing",
+      description:
+        "As Quantified Ventures celebrates 10 years of pioneering work developing novel solutions to improve the well-being of people and planet, we look back at some of our notable achievements and look ahead to how we are building for the future with new partnerships, projects, and innovations. Learn more about how QV’s top-notch team continues to think big, collaborate with bold pioneers, and implement investible solutions that drive measurable outcomes.",
+      link: "#",
+    },
+    {
+      image:
+        "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?w=400&h=250&fit=crop&crop=center",
+      title: "Partnerships Driving Impact in Environmental Sectors",
+      description:
+        "CEO Tee Thomas reflects back on 2024, her first year as CEO and QV's 10th year of breaking through barriers to drive impact for people and planet.",
+      link: "#",
+    },
+  ];
+
+  const renderNewsItem = ({ image, title, description, link }: NewsItem) => {
+    return (
+      <div className="flex flex-col md:flex-row w-full items-start md:items-center  ">
+        <div className="relative w-[40%] h-72">
+          <Image
+            src={image}
+            alt={title}
+            fill
+            className=" w-full h-full object-cover "
+          />
+        </div>
+        <div className="flex flex-col items-start w-[60%]  ml-6 md:ml-12">
+          <h3 className="text-lg md:text-2xl font-bold text-cyan-500 mb-8">
+            {title}
+          </h3>
+          <p className="text-lg md:text-xl text-gray-500 mb-4">{description}</p>
+          <a
+            href={link}
+            className="text-cyan-600 hover:text-cyan-700 transition-colors"
+          >
+            Read more
+          </a>
+        </div>
+      </div>
+    );
+  };
+
+  return (
+    <div className="flex flex-col items-center justify-center max-w-11/12 mx-auto pb-16 px-4">
+      <h1 className="capitalize text-4xl font-bold text-gray-700">
+        Quantified ventures news
+      </h1>
+      <div className="flex flex-col mt-10">
+        {latestNews.map((news, index) => (
+          <div key={index} className="w-full mb-6">
+            {renderNewsItem(news)}
+          </div>
+        ))}
+      </div>
+      <Separator />
+      {/* <div className="mt-20">
+        <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div>
+      </div> */}
     </div>
   );
 }
