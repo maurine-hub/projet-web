@@ -15,6 +15,8 @@ export default function Home() {
       <QuantifiedVenturesPage />
       <SolutionsSections />
       <News />
+      <OurWork />
+      <Benefits />
     </div>
   );
 }
@@ -348,7 +350,7 @@ function News() {
   const renderNewsItem = ({ image, title, description, link }: NewsItem) => {
     return (
       <div className="flex flex-col md:flex-row w-full items-start md:items-center  ">
-        <div className="relative w-[40%] h-72">
+        <div className="relative w-full md:w-[40%] h-72">
           <Image
             src={image}
             alt={title}
@@ -356,7 +358,7 @@ function News() {
             className=" w-full h-full object-cover "
           />
         </div>
-        <div className="flex flex-col items-start w-[60%]  ml-6 md:ml-12">
+        <div className="flex flex-col items-start w-full md:w-[60%] p-2 md:ml-12">
           <h3 className="text-lg md:text-2xl font-bold text-cyan-500 mb-8">
             {title}
           </h3>
@@ -373,8 +375,8 @@ function News() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center max-w-11/12 mx-auto pb-16 px-4">
-      <h1 className="capitalize text-4xl font-bold text-gray-700">
+    <div className="flex flex-col items-center justify-center w-full md:max-w-11/12 mx-auto pb-10 md:pb-16 px-4">
+      <h1 className="capitalize text-2xl md:text-4xl font-bold text-gray-700">
         Quantified ventures news
       </h1>
       <div className="flex flex-col mt-10">
@@ -384,10 +386,110 @@ function News() {
           </div>
         ))}
       </div>
-      <Separator />
-      {/* <div className="mt-20">
-        <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div>
-      </div> */}
+      <Separator className="h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent mt-10" />
+      
     </div>
   );
+}
+
+function OurWork() {
+  const workList = [
+    {
+      image: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?w=400&h=250&fit=crop&crop=center",
+      title: "Innovative Health Solutions for Community Wellbeing",
+      link: "#",
+    },
+    {
+      image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&h=250&fit=crop&crop=center",
+      title: "Quantified Ventures Launches New Climate Finance Solutions",
+      link: "#",
+    },
+    {
+      image: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?w=400&h=250&fit=crop&crop=center",
+      title: "Partnerships Driving Impact in Environmental Sectors",
+      link: "#",  
+    },
+    {
+      image: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?w=400&h=250&fit=crop&crop=center",
+      title: "Innovative Health Solutions for Community Wellbeing",
+      link: "#",
+    },
+    {
+      image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&h=250&fit=crop&crop=center",
+      title: "Quantified Ventures Launches New Climate Finance Solutions",
+      link: "#",
+    },
+    {
+      image: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?w=400&h=250&fit=crop&crop=center",
+      title: "Partnerships Driving Impact in Environmental Sectors",
+      link: "#",  
+    }
+  ];
+
+  const RenderWorkItem = ({ image, title, link }: { image: string, title: string, link: string }) => {
+    return(
+      <div className="flex flex-col w-full items-center  ">
+        <Image src={image} alt={title} width={500} height={250} objectFit="cover" />
+        <p className="text-base text-gray-500 pt-2">{title}</p>
+      </div>
+    )
+  }
+
+  return(
+    <div className="flex flex-col w-full jusct-center items-center  md:max-w-9/12 mx-auto pb-16 px-4">
+      <h1 className="capitalize text-2xl md:text-4xl font-bold text-gray-700">Our work in action</h1>
+      <p className="text-lg md:text-xl text-gray-500 text-center py-6">By incentivizing collaboration, measuring and monetizing key outcomes, and engaging subject matter experts in solution design and development we chart the course to innovation, investment, and impact. </p>
+      <div className="grid grid-cols-1 md:grid-cols-2  gap-6">
+        {workList.map((work, index) => (
+          <RenderWorkItem key={index} {...work} />
+        ))}
+      </div>
+    </div>
+  )
+}
+
+function Benefits () {
+  const benefitsList = [
+    {
+      image: "https://images.unsplash.com/photo-1689757762690-2f09ec1b7228?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw0fHx8ZW58MHx8fHx8",
+      title: "Conseils",
+      description: "Nous évaluons la faisabilité d'entreprendre un financement basé sur les résultats et des solutions de financement, et concevons des structures novatrices pour résoudre des défis environnementaux, sanitaires et sociaux prolongés.",
+    },
+    {
+      image: "https://images.unsplash.com/photo-1749482843703-3895960e7d63?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyfHx8ZW58MHx8fHx8",
+      title: "Développement de Projets",
+      description: "En travaillant avec des partenaires gouvernementaux, associatifs et corporatifs, nous développons des programmes et projets qui créent des bénéfices environnementaux, sanitaires et sociaux pour les personnes et les écosystèmes.",
+    },
+    {
+      image: "https://images.unsplash.com/photo-1695019947916-c3e789ba0e2b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGJlbGxlJTIwaW1hZ2UlMjBkZSUyMGxhJTIwbmF0dXJlfGVufDB8fDB8fHww",
+      title: "Capitalisation",
+      description: "Nous offrons des solutions de financement et de fonds créatives pour les organisations publiques et privées cherchant des investisseurs et souhaitant utiliser des approches basées sur les résultats pour résoudre des problèmes environnementaux, sanitaires et sociaux critiques.",
+    },
+  ];
+
+  const RenderBenefitItem = ({ image, title, description }: { image: string, title: string, description: string }) => {
+    return(
+      <div className="flex flex-col w-full items-start  ">
+        <div className="relative rounded-bl-2xl rounded-tr-2xl w-full h-64 overflow-hidden">
+          <Image src={image} alt={title} fill className="w-full h-full object-cover" />
+        </div>
+        <h3 className="text-lg md:text-2xl font-bold text-cyan-800 py-4">{title}</h3>
+        <p className="text-base md:text-lg text-gray-500 pt-2">{description}</p>
+      </div>
+    )
+  }
+
+  return(
+    <div className="flex flex-col w-full jusct-center items-center max-w-11/12 mx-auto pb-16 px-4  md:mt-10">
+      <h1 className="capitalize text-2xl md:text-4xl font-bold text-gray-700">Benefits of Outcomes-Based Finance</h1>
+      <div className="grid grid-cols-1 md:grid-cols-3 mt-6 md:mt-12 gap-6">
+        {benefitsList.map((benefit, index) => (
+          <RenderBenefitItem key={index} {...benefit} />
+        ))}
+      </div>
+      <Button variant="cyan" className="mt-10">
+        More News
+      </Button>
+    </div>
+  )
 }
