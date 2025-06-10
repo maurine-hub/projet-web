@@ -6,8 +6,8 @@ export default function Home() {
   return (
     <div className="">
       {/* <NavBar /> */}
-      {/* Hero Section */}
       <Hero />
+      <ServicesSection />
     </div>
   );
 }
@@ -58,3 +58,105 @@ function Hero (){
   );
 
 }
+
+
+
+import { Card, CardContent } from '@/components/ui/card';
+import { 
+  Users, 
+  Target, 
+  TrendingUp,
+  Lightbulb,
+  HandHeart,
+  Banknote
+} from 'lucide-react';
+
+interface Service {
+  id: string;
+  icon: React.ComponentType<{ className?: string }>;
+  titleKey: string;
+  descriptionKey: string;
+  color: string;
+  bgColor: string;
+}
+
+const services: Service[] = [
+  {
+    id: 'consulting',
+    icon: Users,
+    titleKey: 'Conseils',
+    descriptionKey: 'Nous évaluons la faisabilité d\'entreprendre un financement basé sur les résultats et des solutions de financement, et concevons des structures novatrices pour résoudre des défis environnementaux, sanitaires et sociaux prolongés.',
+    color: 'text-blue-600',
+    bgColor: 'bg-blue-50'
+  },
+  {
+    id: 'development',
+    icon: Target,
+    titleKey: 'Développement de Projets',
+    descriptionKey: 'En travaillant avec des partenaires gouvernementaux, associatifs et corporatifs, nous développons des programmes et projets qui créent des bénéfices environnementaux, sanitaires et sociaux pour les personnes et les écosystèmes.',
+    color: 'text-emerald-600',
+    bgColor: 'bg-emerald-50'
+  },
+  {
+    id: 'capitalization',
+    icon: TrendingUp,
+    titleKey: 'Capitalisation',
+    descriptionKey: 'Nous offrons des solutions de financement et de fonds créatives pour les organisations publiques et privées cherchant des investisseurs et souhaitant utiliser des approches basées sur les résultats pour résoudre des problèmes environnementaux, sanitaires et sociaux critiques.',
+    color: 'text-cyan-600',
+    bgColor: 'bg-cyan-50'
+  }
+];
+
+function ServicesSection() {
+
+  return (
+    <section className="py-16 lg:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white">
+      <div className="max-w-11/12 mx-auto">
+        {/* Header */}
+        <div className="text-center max-w-5xl mx-auto mb-16 ">
+          <h2 className="text-xl sm:text-xl lg:text-2xl font-bold text-gray-600 mb-6 lg:mb-8 leading-tight">
+            QVentures designs, capitalizes, and scales investible solutions to
+              address the most pressing challenges facing communities.
+          </h2>
+          
+          <p className="text-lg text-gray-600 leading-relaxed max-w-4xl mx-auto">
+            We work with pioneers and change makers to catalyze impact for the greater good by pulling the
+            levers of data, finance, innovation, partnerships, and policy to develop bold solutions that
+            produce verified environmental and social outcomes.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
+          {services.map((service, index) => {
+            const Icon = service.icon;
+            
+            return (
+              <div 
+                key={service.id}
+                className="group border-0 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 "
+              >
+                <div className="p-6 text-center h-full flex flex-col">
+                  <div className={`w-20 h-20 ${service.bgColor} rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                    <Icon className={`w-10 h-10 ${service.color}`} />
+                  </div>
+
+                  <h3 className="text-lg lg:text-xl font-bold text-gray-800 mb-4 group-hover:text-teal-600 transition-colors duration-300">
+                    {service.titleKey}
+                  </h3>
+
+                  <p className="text-base lg:text-lg text-gray-600 leading-relaxed flex-grow">
+                    {service.descriptionKey}
+                  </p>
+
+                  <div className={`w-12 h-1 ${service.color.replace('text-', 'bg-')} rounded-full mx-auto mt-6 group-hover:w-16 transition-all duration-300`}></div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+
