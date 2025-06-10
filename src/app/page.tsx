@@ -1,11 +1,11 @@
 import Image from "next/image";
 import {Button} from "@/components/ui/button";
-import NavBar from "@/app/Header/navBar";
+import NavBar from "@/app/Header/components/layout/navBar";
 
 export default function Home() {
   return (
     <div className="">
-      <NavBar />
+      {/* <NavBar /> */}
       {/* Hero Section */}
       <Hero />
     </div>

@@ -49,7 +49,7 @@ const navItems: NavItem[] = [
     key: 'impact',
     icon: Target,
     hasDropdown: true,
-    dropdownItems: ['case studiesl', 'impact reports', 'in the news', 'projects map', 'testimonials']
+    dropdownItems: ['case studies', 'impact reports', 'in the news', 'projects map', 'testimonials']
   },
   {
     key: 'blog',
@@ -58,7 +58,7 @@ const navItems: NavItem[] = [
   }
 ];
 
-export default function Header() {
+export default function NavBar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [language, setLanguage] = useState('FR');
 
@@ -138,7 +138,7 @@ export default function Header() {
   };
 
   return (
-    <header className="fixed top-0 left-0 w-full bg-transparent z-50 p-10">
+    <header className="absolute top-0 left-0 w-full bg-transparent z-50 p-10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           <div className="flex items-center space-x-2">
