@@ -29,12 +29,12 @@ function Hero() {
           src="https://images.unsplash.com/photo-1695019947916-c3e789ba0e2b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGJlbGxlJTIwaW1hZ2UlMjBkZSUyMGxhJTIwbmF0dXJlfGVufDB8fDB8fHww"
           alt="Hero Image"
           fill
-          className="object-cover  h-screen"
+          className="object-cover rounded-br-[200px] md:rounded-br-[300px] h-screen"
           priority
         />
       </div>
 
-      {/* <div className="absolute inset-0 bg-teal-500/20 rounded-br-[200px] md:rounded-br-[300px]" /> */}
+      <div className="absolute inset-0 bg-black/30 rounded-br-[200px] md:rounded-br-[300px]" />
 
       <div className="relative z-10 grid grid-cols-2 items-center justify-center h-full text-center px-24">
         <div className="grid-cols-1 text-left mt-32">

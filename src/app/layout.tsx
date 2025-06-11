@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import ConditionalLayout from "./Header/components/layout/conditional-layout";
+// import NavBar from "./Header/components/layout/navBar";
+// import { Footer } from "./Header/components/layout/conditional-layout";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,6 +17,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-gray-100">
+        {/* <NavBar />
+        {children}
+        <Footer /> */}
         <ConditionalLayout>{children}</ConditionalLayout>
       </body>
     </html>

@@ -18,12 +18,14 @@ import {
   Target,
   Lightbulb
 } from 'lucide-react';
+import Link from 'next/link';
 
 interface NavItem {
   key: string;
   icon: React.ComponentType<{ className?: string }>;
   hasDropdown: boolean;
   dropdownItems?: string[];
+  url: string;
 }
 
 const navItems: NavItem[] = [
@@ -31,30 +33,35 @@ const navItems: NavItem[] = [
     key: 'about',
     icon: Lightbulb,
     hasDropdown: true,
-    dropdownItems: ['careers ', 'our team', 'our values']
+    dropdownItems: ['careers ', 'our team', 'our values'],
+    url: '/about'
   },
   {
     key: 'climate',
     icon: Leaf,
     hasDropdown: true,
-    dropdownItems: ['community finance', 'green banks andclimate resilience', 'natural climate solutions', 'outdoor recreation']
+    dropdownItems: ['community finance', 'green banks andclimate resilience', 'natural climate solutions', 'outdoor recreation'],
+    url: '/climate'
   },
   {
     key: 'health',
     icon: Heart,
     hasDropdown: true,
-    dropdownItems: ['cbo subtainability solutions', 'mco market growth', 'sdoh strategy and financing', 'state medicaid innovation']
+    dropdownItems: ['cbo subtainability solutions', 'mco market growth', 'sdoh strategy and financing', 'state medicaid innovation'],
+    url: '/health'
   },
   {
     key: 'impact',
     icon: Target,
     hasDropdown: true,
-    dropdownItems: ['case studies', 'impact reports', 'in the news', 'projects map', 'testimonials']
+    dropdownItems: ['case studies', 'impact reports', 'in the news', 'projects map', 'testimonials'],
+    url: '/impact'
   },
   {
     key: 'blog',
     icon: () => null,
-    hasDropdown: false
+    hasDropdown: false,
+    url: '/blog'
   }
 ];
 
@@ -71,7 +78,9 @@ export default function NavBar() {
         <DropdownMenu>
           <DropdownMenuTrigger className="flex items-center space-x-1 font-bold uppercase text-white hover:text-teal-600 transition-colors duration-200 focus:outline-none group">
             <Icon className="h-4 w-4" />
+            <Link href={item.url}>
             <span className="font-medium">{item.key}</span>
+            </Link>
             <ChevronDown className="h-4 w-4 transition-transform group-data-[state=open]:rotate-180" />
           </DropdownMenuTrigger>
           <DropdownMenuContent className="bg-[#035987] shadow-lg border-0 rounded-b-lg p-2 min-w-[150px] mt-6">

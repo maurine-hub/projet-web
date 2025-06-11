@@ -24,7 +24,7 @@ export default function ConditionalLayout({
   );
 }
 
-function Footer() {
+export function Footer() {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
