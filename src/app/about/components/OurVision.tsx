@@ -100,8 +100,4 @@ export const OurVision = () => {
   );
 };
 
-// function Hero (){
-//   return(
 
-//   )
-// }

@@ -99,7 +99,7 @@ export default function NavBar() {
 
     return (
       <a 
-        href="#" 
+        href={item.url}
         className="flex items-center space-x-1 font-bold uppercase text-white hover:text-teal-600 transition-colors duration-200 "
       >
         <Icon className="h-4 w-4" />
@@ -163,7 +163,7 @@ export default function NavBar() {
           </nav>
 
           <div className="flex items-center space-x-4">
-            <Button variant="secondary">
+            <Button variant="cyan">
               Contact
             </Button>
 
