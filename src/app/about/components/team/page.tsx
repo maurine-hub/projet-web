@@ -76,6 +76,36 @@ export default function TeamPage() {
     );
   };
 
+  const AffiliateMembersCard = ({
+    name,
+    role,
+    image,
+    link,
+  }: {
+    name: string;
+    role: string;
+    image: string;
+    link: string;
+  }) => {
+    return (
+      <div className="flex flex-col w-full mb-6 group  ">
+        <div className="relative rounded-bl-2xl rounded-tr-2xl w-full h-48 overflow-hidden ">
+          <Image
+            src={image}
+            alt={name}
+            fill
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-80 transition-opacity duration-300"></div>
+        </div>
+        <h3 className="text-base md:text-xl font-semibold text-center text-gray-500 pt-4">
+          {name}
+        </h3>
+        <p className="text-base text-center text-gray-500 pt-1">{role}</p>
+      </div>
+    );
+  };
+
   return (
     <div>
       <div className="relative w-full h-[450px] ">
@@ -91,8 +121,8 @@ export default function TeamPage() {
 
         <div className="absolute inset-0 bg-black/30 rounded-bl-[200px] md:rounded-bl-[300px]" />
 
-        <div className="relative z-10 grid grid-cols-2 items-center justify-center h-full text-center px-24">
-          <div className="grid-cols-1 text-left mt-32">
+        <div className="relative z-10 grid md:grid-cols-2 items-center justify-center h-full text-center px-24">
+          <div className="md:grid-cols-1 text-left mt-32">
             <h1 className="capitalize text-3xl md:text-5xl font-bold text-white mb-6">
               Our team
             </h1>
@@ -100,7 +130,7 @@ export default function TeamPage() {
         </div>
       </div>
 
-      <div className="max-w-10/12 mx-auto py-24">
+      <div className="w-full max-sm:px-6 md:max-w-10/12 md:mx-auto py-24">
         <div>
           <h1 className="text-xl md:text-2xl font-bold text-gray-700 capitalize mb-6">
             core team
@@ -112,14 +142,14 @@ export default function TeamPage() {
           </div>
         </div>
         <div className="mt-10">
-          <h1 className="text-xl md:text-2xl font-bold text-gray-700 capitalize mb-6">            
-            affiliate team
+          <h1 className="text-xl md:text-2xl font-bold text-gray-700 capitalize mb-6">
+            affiliate staff
           </h1>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
             {teamMembers.map((member, index) => (
-              <TeamMemberCard key={index} {...member} />
+              <AffiliateMembersCard key={index} {...member} />
             ))}
-        </div>
+          </div>
         </div>
       </div>
     </div>
