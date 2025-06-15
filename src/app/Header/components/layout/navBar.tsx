@@ -68,7 +68,7 @@ export default function NavBar() {
       icon: Leaf,
       hasDropdown: true,
       dropdownItems: [
-        { key: "community Finance", url: "/climate/community-finance" },
+        { key: "community Finance", url: "/climate/components/community" },
         { key: "green Banks", url: "/climate/green-banks" },
         { key: "natural Climate Solutions", url: "/climate/natural-solutions" },
         { key: "outdoor Recreation", url: "/climate/outdoor-recreation" },
