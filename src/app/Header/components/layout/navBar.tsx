@@ -57,9 +57,9 @@ export default function NavBar() {
       icon: Lightbulb,
       hasDropdown: true,
       dropdownItems: [
-        { key: "careers", url: "/about/careers" },
-        { key: "our Team", url: "/about/team" },
-        { key: "our Values", url: "/about/values" },
+        { key: "careers", url: "/about/components/careers" },
+        { key: "our Team", url: "/about/components/team" },
+        { key: "our Values", url: "/about/components/values" },
       ],
       urlKey: "/about",
     },
