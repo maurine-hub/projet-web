@@ -31,6 +31,7 @@ import { setUserLocale } from "@/i18n/locale";
 import { Locale } from "@/i18n/config";
 import { useTransition } from "react";
 import { useLocale } from "next-intl";
+import { buttonVariants } from "@/components/ui/button";
 
 interface DropdownItem {
   key: string;
@@ -80,10 +81,10 @@ export default function NavBar() {
       icon: Heart,
       hasDropdown: true,
       dropdownItems: [
-        { key: "cbo Sustainability", url: "/health/cbo-sustainability" },
-        { key: "mco Market Growth", url: "/health/mco-market" },
-        { key: "sdoh Strategy", url: "/health/sdoh-strategy" },
-        { key: "state Medicaid", url: "/health/state-medicaid" },
+        { key: "cbo Sustainability", url: "/health/components/cbo" },
+        { key: "mco Market Growth", url: "/health/components/mco" },
+        { key: "sdoh Strategy", url: "/health/components/sdoh" },
+        { key: "state Medicaid", url: "/health/components/state" },
       ],
       urlKey: "/health",
     },
@@ -92,11 +93,11 @@ export default function NavBar() {
       icon: Target,
       hasDropdown: true,
       dropdownItems: [
-        { key: "case Studies", url: "/impact/case-studies" },
-        { key: "impact Reports", url: "/impact/reports" },
-        { key: "in The News", url: "/impact/news" },
-        { key: "projects Map", url: "/impact/projects-map" },
-        { key: "testimonials", url: "/impact/testimonials" },
+        { key: "case Studies", url: "/impact/components/case-studies" },
+        { key: "impact Reports", url: "/impact/components/impact-report" },
+        { key: "in The News", url: "/impact/components/news" },
+        { key: "projects Map", url: "/impact/components/projects-map" },
+        { key: "testimonials", url: "/impact/components/testimonials" },
       ],
       urlKey: "/impact",
     },
@@ -225,12 +226,12 @@ export default function NavBar() {
               <Icon className="h-5 w-5" />
               <span className="font-medium">{item.key}</span>
             </Link>
-            <button
+            <Button
               onClick={() => setIsExpanded(!isExpanded)}
               className="p-3 text-gray-500 hover:text-teal-600 transition-colors"
             >
               <ChevronDown className={`h-4 w-4 transition-transform ${isExpanded ? 'rotate-180' : ''}`} />
-            </button>
+            </Button>
           </div>
           
           {isExpanded && (
@@ -281,13 +282,13 @@ export default function NavBar() {
           </nav>
 
           <div className="flex items-center space-x-4">
-            <Button variant="cyan" asChild>
+            <Button variant="cyan" asChild className="hidden lg:inline-flex">
               <Link href="/contact">contact</Link>
             </Button>
 
             <Button
-              variant="outline"
-              className="text-teal-600 border-teal-200 hover:bg-teal-50 hover:border-teal-300 transition-colors min-w-[80px]"
+              variant="ghost"
+              className="bg-white/30 text-white border-1 rounded-full border-white"
               onClick={handleLocaleChange}
               disabled={isPending}
             >
@@ -296,7 +297,7 @@ export default function NavBar() {
               ) : (
                 <>
                   <span className="font-medium">{locale.toUpperCase()}</span>
-                  <span className="text-gray-400 mx-1">|</span>
+                  <span className="text-white mx-1">|</span>
                   <span className="text-gray-500">
                     {locale === "fr" ? "EN" : "FR"}
                   </span>
@@ -308,11 +309,11 @@ export default function NavBar() {
             <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
               <SheetTrigger asChild className="lg:hidden">
                 <Button
-                  variant="ghost"
+                  variant="cyan"
                   size="sm"
-                  className="text-gray-600 hover:text-cyan-600 hover:bg-teal-50"
+                  className="text-white hover:text-cyan-600 hover:bg-teal-50"
                 >
-                  <Menu className="h-6 w-6" />
+                  <Menu className="h-10 w-10" />
                 </Button>
               </SheetTrigger>
               <SheetContent side="right" className="w-80 p-0 flex flex-col max-h-screen overflow-hidden">

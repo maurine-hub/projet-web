@@ -9,7 +9,7 @@ import { Separator } from "@/components/ui/separator";
 
 export default function Home() {
   return (
-    <div className="w-full bg-gray-50">
+    <div className="w-full bg-gray-100">
       <Hero />
       <ServicesSection />
       <QuantifiedVenturesPage />
@@ -23,7 +23,7 @@ export default function Home() {
 
 function Hero() {
   return (
-    <div className="relative w-full h-screen">
+    <div className="relative w-full h-[470px] md:h-screen">
       <div className="absolute inset-0">
         <Image
           src="https://images.unsplash.com/photo-1695019947916-c3e789ba0e2b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGJlbGxlJTIwaW1hZ2UlMjBkZSUyMGxhJTIwbmF0dXJlfGVufDB8fDB8fHww"
@@ -36,12 +36,12 @@ function Hero() {
 
       <div className="absolute inset-0 bg-black/30 rounded-br-[200px] md:rounded-br-[300px]" />
 
-      <div className="relative z-10 grid grid-cols-2 items-center justify-center h-full text-center px-24">
-        <div className="grid-cols-1 text-left mt-32">
+      <div className="relative z-10 grid md:grid-cols-2 px-6 items-center justify-center h-full text-center md:px-24">
+        <div className="grid-cols-1 text-left mt-16 md:mt-32">
           <h1 className="text-3xl md:text-5xl font-bold text-white mb-6">
             Bold, Investible Solutions for the Wellbeing of People and Planet
           </h1>
-          <Button className="bg-green-500 hover:bg-green-600 text-white">
+          <Button variant="cyan" size="large" className="hover:bg-green-600 ">
             Contact Us to Get Started
           </Button>
         </div>
@@ -91,7 +91,7 @@ const services: Service[] = [
 
 function ServicesSection() {
   return (
-    <section className="py-16 lg:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white">
+    <section className="py-16 lg:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-100 to-white">
       <div className="max-w-11/12 mx-auto">
         <div className="text-center max-w-5xl mx-auto mb-16 ">
           <h2 className="text-xl sm:text-xl lg:text-2xl font-bold text-gray-600 mb-6 lg:mb-8 leading-tight">
@@ -487,7 +487,7 @@ function Benefits () {
           <RenderBenefitItem key={index} {...benefit} />
         ))}
       </div>
-      <Button variant="cyan" className="mt-10">
+      <Button variant="cyan" size="large" className="mt-10">
         More News
       </Button>
     </div>
