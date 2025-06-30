@@ -1,8 +1,8 @@
 "use client";
 
-import Image from "next/image";
+import HeroSection from "@/components/HeroSection";
 import { Separator } from "@/components/ui/separator";
-import Link from "next/link";
+import Image from "next/image";
 
 const services = [
   {
@@ -91,27 +91,10 @@ const SolutionCard = ({
 export default function GreenBacksPage() {
   return (
     <div>
-      <div className="relative w-full h-[450px] ">
-        <div className="absolute inset-0">
-          <Image
-            src="https://images.unsplash.com/photo-1745874864678-f464940bb513?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw1Mnx8fGVufDB8fHx8fA%3D%3D"
-            alt="Hero Image"
-            fill
-            className="object-cover rounded-bl-[200px] md:rounded-bl-[300px] h-screen"
-            priority
-          />
-        </div>
-
-        <div className="absolute inset-0 bg-black/30 rounded-bl-[200px] md:rounded-bl-[300px]" />
-
-        <div className="relative z-10 grid grid-cols-2 items-center justify-center h-full text-center px-24">
-          <div className="grid-cols-1 text-left mt-32">
-            <h1 className="capitalize text-3xl md:text-5xl font-bold text-white mb-6">
-              Green Banks and Climate Resilience
-            </h1>
-          </div>
-        </div>
-      </div>
+      <HeroSection
+        imageUrl="https://images.unsplash.com/photo-1745874864678-f464940bb513?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw1Mnx8fGVufDB8fHx8fA%3D%3D"
+        title="Green Banks and Climate Resilience"
+      />
 
       <div className="w-full md:max-w-10/12 max-md:px-6 mx-auto py-16   md:py-20">
         <p className="text-base md:text-xl text-left text-gray-600 leading-relaxed my-6">
@@ -119,7 +102,7 @@ export default function GreenBacksPage() {
           communities, particularly under-resourced ones, with their drinking
           water, wastewater, and stormwater infrastructure needs using public
           financing mechanisms such as the State Revolving Funds (SRFs).
-          Quantified Ventures’ hands-on experience in municipal finance, water
+          Quantified Ventures' hands-on experience in municipal finance, water
           infrastructure project development, EPA program and regulatory
           requirements, and the Clean and Drinking Water SRF application process
           differentiates our team from other consulting firms and technical
@@ -130,7 +113,7 @@ export default function GreenBacksPage() {
           federal funding requirements (crosscutters) including environmental
           (NEPA) reviews, Single Audit Act, Davis Bacon Wage Act, Build America,
           Buy America (BABA), American Iron and Steel (AIS), and Disadvantaged
-          Business Enterprise. This, combined with the team’s knowledge and
+          Business Enterprise. This, combined with the team's knowledge and
           track record of partnering with other funders to leverage public
           resources, enables the most economically distressed communities to
           meet water infrastructure improvement goals more affordably.

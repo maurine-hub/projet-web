@@ -1,3 +1,4 @@
+import HeroSection from "@/components/HeroSection";
 import Image from "next/image";
 
 export default function TeamPage() {
@@ -108,27 +109,10 @@ export default function TeamPage() {
 
   return (
     <div>
-      <div className="relative w-full h-[450px] ">
-        <div className="absolute inset-0">
-          <Image
-            src="https://images.unsplash.com/photo-1681949103006-70066fb25dfe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGdyb3VwZSUyMGQlMjBlcGVyc29ubmVzJTIwZGFucyUyMHVuJTIwYnVyZWF1fGVufDB8fDB8fHww"
-            alt="Hero Image"
-            fill
-            className="object-cover rounded-bl-[200px] md:rounded-bl-[300px] h-screen"
-            priority
-          />
-        </div>
-
-        <div className="absolute inset-0 bg-black/30 rounded-bl-[200px] md:rounded-bl-[300px]" />
-
-        <div className="relative z-10 grid md:grid-cols-2 items-center justify-center h-full text-center px-24">
-          <div className="md:grid-cols-1 text-left mt-32">
-            <h1 className="capitalize text-3xl md:text-5xl font-bold text-white mb-6">
-              Our team
-            </h1>
-          </div>
-        </div>
-      </div>
+      <HeroSection
+        imageUrl="https://images.unsplash.com/photo-1681949103006-70066fb25dfe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGdyb3VwZSUyMGQlMjBlcGVyc29ubmVzJTIwZGFucyUyMHVuJTIwYnVyZWF1fGVufDB8fDB8fHww"
+        title="Our team"
+      />
 
       <div className="w-full max-sm:px-6 md:max-w-10/12 md:mx-auto py-24">
         <div>
