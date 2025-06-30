@@ -1,13 +1,34 @@
 import HeroSection from "@/components/HeroSection";
 import { Separator } from "@/components/ui/separator";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Handshake, Leaf, Lightbulb, ShieldCheck } from "lucide-react";
 
 export default function ValuesPage() {
   const valuesList = [
-    "Integrity",
-    "Innovation",
-    "Collaboration",
-    "Sustainability",
-    "Equity and Inclusion",
+    {
+      title: "Integrity",
+      description:
+        "This leads to stronger teams, more impactful projects, and a track record that aligns",
+      icon: <ShieldCheck />,
+    },
+    {
+      title: "Innovation",
+      description:
+        "We believe in the power of doing business for good and good business.",
+      icon: <Lightbulb />,
+    },
+    {
+      title: "Collaboration",
+      description:
+        " We are committed to equity and inclusion in our workplace and our work.",
+      icon: <Leaf />,
+    },
+    {
+      title: "Sustainability",
+      description:
+        " We are committed to equity and inclusion in our workplace and our work.",
+      icon: <Handshake />,
+    },
   ];
 
   const certifications = [
@@ -41,25 +62,47 @@ export default function ValuesPage() {
       />
 
       <div className="w-full max-sm:px-6 md:max-w-10/12 md:mx-auto my-24">
-        <h1 className="text-xl md:text-2xl font-bold text-[#035987]">
-          Our values
-        </h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-6">
-          <p className="text-xl font-bold md:text-2xl ">
-            We believe in the power of doing business for good and good
-            business.
+        <div>
+          <h1 className="text-xl md:text-2xl font-bold text-[#035987]">
+            Our values
+          </h1>
+          <p className="text-xl font-bold md:text-2xl  text-gray-700">
+            We believe in the power of doing business
           </p>
-          <div>
-            <ul className="list-disc pl-6 mt-4">
+          <p className="text-xl font-bold md:text-2xl mb-16 text-gray-700">
+            for good and good business.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mt-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
               {valuesList.map((value, index) => (
-                <li key={index} className="text-lg md:text-xl mb-2">
-                  {value}
-                </li>
+                <div key={index}>
+                  <div className="flex flex-col items-center md:items-start gap-2 mb-2">
+                    <div className="p-2 bg-yellow-200 rounded-full ">
+                      {value.icon}
+                    </div>
+                    <h3 className="text-lg md:text-xl font-semibold text-gray-700">
+                      {value.title}
+                    </h3>
+                    <p className="text-base md:text-lg text-gray-500">
+                      {value.description}
+                    </p>
+                  </div>
+                </div>
               ))}
-            </ul>
+            </div>
+          <div className="flex items-center justify-end">
+            <Image
+              src="https://images.unsplash.com/photo-1632961974688-fae53de3cabc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzAyfHxvdXIlMjB2YWx1ZXN8ZW58MHx8MHx8fDA%3D"
+              alt="values"
+              width={400}
+              height={400}
+              className="rounded-tl-3xl rounded-br-3xl "
+            />
           </div>
         </div>
-        <div className="bg-gray-200 rounded-lg  md:p-16 mt-6">
+        <div className="bg-gray-200 rounded-lg  md:p-16 mt-20">
           <p className="text-lg md:text-2xl text-gray-600 ">
             Our Vision is to catalyze bold, investible solutions that unlock
             more capital for a measurably healthier people and planet.​{" "}

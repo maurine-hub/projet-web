@@ -160,7 +160,7 @@ export default function NavBar() {
     if (item.hasDropdown && item.dropdownItems) {
       return (
         <div
-          className="relative"
+          className="relative "
           onMouseEnter={() => handleMouseEnter(item.key)}
           onMouseLeave={handleMouseLeave}
         >
@@ -216,7 +216,7 @@ export default function NavBar() {
 
     if (item.hasDropdown && item.dropdownItems) {
       return (
-        <div className="space-y-1">
+        <div className="space-y-1 ">
           <div className="flex items-center justify-between w-full">
             <Link
               href={item.urlKey}
@@ -265,7 +265,7 @@ export default function NavBar() {
   };
 
   return (
-    <header className="absolute top-0 left-0 w-full bg-transparent z-50 p-10">
+    <header className="absolute top-0 left-0 w-full bg-transparent z-50 py-10 px-12 ">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           <div className="flex items-center space-x-2 bg-white py-2 px-7 rounded-br-[100px] rounded-tl-[100px]">
