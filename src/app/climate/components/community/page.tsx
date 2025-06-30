@@ -92,7 +92,7 @@ const SolutionCard = ({
 export default function CommunityPage() {
    const testimonies = [
     { name: "Alice", testimony: "Great service and fast delivery!" },
-    { name: "Bob", testimony: "Amazing quality products, highly recommend!" },
+    { name: "Bob", testimony: "Additionally, we support communities through completing the expanse of federal funding requirements (crosscutters) including environmental (NEPA) reviews, Single Audit Act, Davis Bacon Wage Act, Build America, Buy America (BABA), American Iron and Steel (AIS), " },
     {
       name: "Charlie",
       testimony: "Customer support was very helpful and friendly.",

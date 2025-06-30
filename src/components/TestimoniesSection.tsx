@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import Image from "next/image";
 
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -17,16 +18,18 @@ type Testimonial = {
   name: string;
   image?: string;
   testimony: string;
-}
+};
 
-export function TestimoniesSection({testimonies}: {testimonies: Testimonial[]}) {
+export function TestimoniesSection({
+  testimonies,
+}: {
+  testimonies: Testimonial[];
+}) {
   const plugin = React.useRef(
     Autoplay({
       delay: 4000,
     })
   );
-
- 
 
   return (
     <section className="space-y-10">
@@ -43,23 +46,24 @@ export function TestimoniesSection({testimonies}: {testimonies: Testimonial[]}) 
       >
         <CarouselContent>
           {testimonies.map((testimonial, index) => (
-            <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 ">
-              <Card className="py-4 ">
-                <CardContent className="flex flex-col items-center justify-center p-6 space-y-4">
-                  <p className="text-lg italic text-center">
-                    &quot;{testimonial.testimony}&quot;
-                  </p>
-                  <div className="flex items-center gap-2">
-                    <Avatar>
-                      <AvatarImage
-                        src={testimonial.image || "https://github.com/shadcn.png"}
-                        alt="image-testimonial"
-                      />
-                      <AvatarFallback>CN</AvatarFallback>
-                    </Avatar>
-                    <span className="text-sm font-semibold text-gray-700">
-                      - {testimonial.name}
-                    </span>
+            <CarouselItem key={index} className=" md:basis-w-full">
+              <Card className="">
+                <CardContent className="flex items-center justify-center space-y-4 gap-10">
+                  <div className="flex items-centerw-1/2">
+                    <Image
+                      src={testimonial.image || "https://github.com/shadcn.png"}
+                      alt="image-testimonial"
+                      width={300}
+                      height={300}
+                      className="rounded-full"
+                    />
+                  </div>
+
+                  <div className="w-1/2 flex flex-col items-start justify-center  space-y-4">
+                    <p className="text-lg md:text-2xl font-semibold text-gray-700">
+                      {testimonial.name}
+                    </p>
+                    <p className="text-lg mt-6 ">{testimonial.testimony}</p>
                   </div>
                 </CardContent>
               </Card>
