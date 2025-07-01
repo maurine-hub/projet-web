@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
+import Link from "next/link";
 
 // Données statiques des posts
 const blogPosts = [
@@ -149,7 +150,7 @@ export const PostsBlog = () => {
               {filteredPosts.map((post) => (
                 <div
                   key={post.id}
-                  className="overflow-hidden hover:shadow-lg transition-shadow cursor-pointer group"
+                  className="overflow-hidden hover:shadow-lg transition-shadow  group"
                 >
                   <div className="relative">
                     <img
@@ -185,12 +186,12 @@ export const PostsBlog = () => {
                     <p className=" line-clamp-3 text-base md:text-xl text-gray-600 mt-6 mb-2" >
                       {post.description}
                     </p>
-                    <a
-                      href="#"
+                    <Link
+                      href="/blog/components/article-blog"
                       className="text-base uppercase text-cyan-600"
                     >
                       Lire plus
-                    </a>
+                    </Link>
                   </div>
                 </div>
               ))}

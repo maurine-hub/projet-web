@@ -32,6 +32,7 @@ import { Locale } from "@/i18n/config";
 import { useTransition } from "react";
 import { useLocale } from "next-intl";
 import { buttonVariants } from "@/components/ui/button";
+import { usePathname } from "next/navigation";
 
 interface DropdownItem {
   key: string;
@@ -111,6 +112,7 @@ export default function NavBar() {
 
   const locale = useLocale();
   const [isPending, startTransition] = useTransition();
+  const path = usePathname();
 
   const handleMouseEnter = (itemKey: string) => {
     if (hoverTimeoutRef.current) {
@@ -164,11 +166,11 @@ export default function NavBar() {
           onMouseEnter={() => handleMouseEnter(item.key)}
           onMouseLeave={handleMouseLeave}
         >
-          <div className="flex items-center space-x-1 font-bold uppercase text-white hover:text-white/60 transition-colors duration-200 group cursor-pointer">
+          <div className={`${path.startsWith("/blog/components/article-blog")  ? "text-cyan-600  hover:text-cyan-400 " : "text-white hover:text-white/60 "} flex items-center space-x-1 font-bold uppercase transition-colors duration-200 group cursor-pointer `}>
             <Icon className="h-4 w-4" />
             <Link 
               href={item.urlKey} 
-              className="font-medium hover:text-white/60 transition-colors duration-200"
+              className=" font-medium"
               onClick={(e) => {
                 // Permettre la navigation normale
                 setOpenDropdown(null);
@@ -201,8 +203,8 @@ export default function NavBar() {
 
     return (
       <Link
-        href={item.urlKey}
-        className="flex items-center space-x-1 font-bold uppercase text-white hover:text-teal-600 transition-colors duration-200"
+        href={item.urlKey} 
+        className={`${path.startsWith("/blog/components/article-blog")?"text-cyan-600 hover:text-cyan-400" : "text-white hover:text-teal-600 hover:bg-teal-50"} flex items-center space-x-1 font-medium uppercase transition-colors duration-200`}
       >
         <Icon className="h-4 w-4" />
         <span>{item.key}</span>
@@ -255,7 +257,7 @@ export default function NavBar() {
     return (
       <Link
         href={item.urlKey}
-        className="flex items-center space-x-2 w-full text-left p-3 text-gray-600 hover:text-teal-600 hover:bg-teal-50 rounded-lg transition-colors font-medium"
+        className={`${path.startsWith("/blog/components/article-blog")?"text-cyan-600 hover:text-cyan-400" : "text-white hover:text-teal-600 hover:bg-teal-50"} flex items-center space-x-2 w-full text-left p-3 rounded-lg transition-colors font-medium`}
         onClick={() => setIsMobileMenuOpen(false)}
       >
         <Icon className="h-5 w-5" />
@@ -288,7 +290,7 @@ export default function NavBar() {
 
             <Button
               variant="ghost"
-              className="bg-white/30 text-white border-1 rounded-full border-white"
+              className={`${path.startsWith("/blog/components/article-blog") ? " border-cyan-600 text-cyan-600" : "bg-white/30 text-white border-white"} flex items-center space-x-1 font-medium uppercase transition-colors duration-200 border-1 rounded-full`}
               onClick={handleLocaleChange}
               disabled={isPending}
             >
@@ -297,7 +299,7 @@ export default function NavBar() {
               ) : (
                 <>
                   <span className="font-medium">{locale.toUpperCase()}</span>
-                  <span className="text-white mx-1">|</span>
+                  <span className={ path.startsWith("/blog/components/article-blog") ? "text-cyan-600 mx-1" : "text-white mx-1"}>|</span>
                   <span className="text-gray-500">
                     {locale === "fr" ? "EN" : "FR"}
                   </span>
