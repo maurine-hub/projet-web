@@ -270,9 +270,9 @@ export default function NavBar() {
     <header className="absolute top-0 left-0 w-full bg-transparent z-50 py-10 px-12 ">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-2 bg-white py-2 px-7 rounded-br-[100px] rounded-tl-[100px]">
             <Link href="/">
-              <span className="text-2xl font-bold text-teal-600">LOGO</span>
+              <span className="text-5xl font-bold text-[#2AAA8A]">GreenoCity</span>
             </Link>
           </div>
 
@@ -284,7 +284,7 @@ export default function NavBar() {
           </nav>
 
           <div className="flex items-center space-x-4">
-            <Button variant="cyan" asChild className="hidden lg:inline-flex">
+            <Button  asChild className="hidden lg:inline-flex bg-[#2AAA8A]">
               <Link href="/contact">contact</Link>
             </Button>
 

@@ -1,7 +1,8 @@
 "use client";
 
-import Image from "next/image";
+import HeroSection from "@/components/HeroSection";
 import { Separator } from "@/components/ui/separator";
+import Image from "next/image";
 import Link from "next/link";
 import { TestimoniesSection } from "@/components/TestimoniesSection";
 
@@ -115,27 +116,10 @@ export default function NatrualPage() {
 
   return (
     <div>
-      <div className="relative w-full h-[450px] ">
-        <div className="absolute inset-0">
-          <Image
-            src="https://images.unsplash.com/photo-1749370250800-4164aea78707?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw1OHx8fGVufDB8fHx8fA%3D%3D"
-            alt="Hero Image"
-            fill
-            className="object-cover rounded-bl-[200px] md:rounded-bl-[300px] h-screen"
-            priority
-          />
-        </div>
-
-        <div className="absolute inset-0 bg-black/30 rounded-bl-[200px] md:rounded-bl-[300px]" />
-
-        <div className="relative z-10 grid grid-cols-2 items-center justify-center h-full text-center px-24">
-          <div className="grid-cols-1 text-left mt-32">
-            <h1 className="capitalize text-3xl md:text-5xl font-bold text-white mb-6">
-              Natural Climate Solutions{" "}
-            </h1>
-          </div>
-        </div>
-      </div>
+      <HeroSection
+        imageUrl="https://images.unsplash.com/photo-1749370250800-4164aea78707?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw1OHx8fGVufDB8fHx8fA%3D%3D"
+        title="Natural Climate Solutions"
+      />
 
       <div className="w-full md:max-w-10/12 max-md:px-6 mx-auto py-16   md:py-20">
         <p className="text-base md:text-xl text-left text-gray-600 leading-relaxed my-6">
@@ -143,7 +127,7 @@ export default function NatrualPage() {
           communities, particularly under-resourced ones, with their drinking
           water, wastewater, and stormwater infrastructure needs using public
           financing mechanisms such as the State Revolving Funds (SRFs).
-          Quantified Ventures’ hands-on experience in municipal finance, water
+          Quantified Ventures' hands-on experience in municipal finance, water
           infrastructure project development, EPA program and regulatory
           requirements, and the Clean and Drinking Water SRF application process
           differentiates our team from other consulting firms and technical
@@ -154,7 +138,7 @@ export default function NatrualPage() {
           federal funding requirements (crosscutters) including environmental
           (NEPA) reviews, Single Audit Act, Davis Bacon Wage Act, Build America,
           Buy America (BABA), American Iron and Steel (AIS), and Disadvantaged
-          Business Enterprise. This, combined with the team’s knowledge and
+          Business Enterprise. This, combined with the team's knowledge and
           track record of partnering with other funders to leverage public
           resources, enables the most economically distressed communities to
           meet water infrastructure improvement goals more affordably.
@@ -237,7 +221,7 @@ function News() {
         "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&h=250&fit=crop&crop=center",
       title: "Quantified Ventures Launches New Climate Finance Solutions",
       description:
-        "Broadband internet and water systems may seem like an odd pairing, but they’re inseparable when it comes to tackling challenges like aging infrastructure, workforce shortages, and the growing impacts of climate change. As affordability becomes an even greater concern, reliable fiber optic broadband offers a transformative solution to modernize water systems, enhance efficiency, and bridge urban-rural divides. ",
+        "Broadband internet and water systems may seem like an odd pairing, but they're inseparable when it comes to tackling challenges like aging infrastructure, workforce shortages, and the growing impacts of climate change. As affordability becomes an even greater concern, reliable fiber optic broadband offers a transformative solution to modernize water systems, enhance efficiency, and bridge urban-rural divides. ",
       link: "#",
     },
     {
@@ -245,7 +229,7 @@ function News() {
         "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?w=400&h=250&fit=crop&crop=center",
       title: "Innovative Health Solutions for Community Wellbeing",
       description:
-        "As Quantified Ventures celebrates 10 years of pioneering work developing novel solutions to improve the well-being of people and planet, we look back at some of our notable achievements and look ahead to how we are building for the future with new partnerships, projects, and innovations. Learn more about how QV’s top-notch team continues to think big, collaborate with bold pioneers, and implement investible solutions that drive measurable outcomes.",
+        "As Quantified Ventures celebrates 10 years of pioneering work developing novel solutions to improve the well-being of people and planet, we look back at some of our notable achievements and look ahead to how we are building for the future with new partnerships, projects, and innovations. Learn more about how QV's top-notch team continues to think big, collaborate with bold pioneers, and implement investible solutions that drive measurable outcomes.",
       link: "#",
     },
     {

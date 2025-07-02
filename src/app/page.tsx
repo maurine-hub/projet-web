@@ -23,25 +23,25 @@ export default function Home() {
 
 function Hero() {
   return (
-    <div className="relative w-full h-[470px] md:h-screen">
+    <div className="relative w-full h-[270px] md:h-[600px]">
       <div className="absolute inset-0">
         <Image
           src="https://images.unsplash.com/photo-1695019947916-c3e789ba0e2b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGJlbGxlJTIwaW1hZ2UlMjBkZSUyMGxhJTIwbmF0dXJlfGVufDB8fDB8fHww"
           alt="Hero Image"
           fill
-          className="object-cover rounded-br-[200px] md:rounded-br-[300px] h-screen"
+          className="object-cover rounded-br-[200px] md:rounded-br-[300px] md:rounded-bl-[300px] h-screen"
           priority
         />
       </div>
 
-      <div className="absolute inset-0 bg-black/30 rounded-br-[200px] md:rounded-br-[300px]" />
+      <div className="absolute inset-0 bg-black/30 rounded-br-[200px] md:rounded-br-[300px] md:rounded-bl-[300px]" />
 
-      <div className="relative z-10 grid md:grid-cols-2 px-6 items-center justify-center h-full text-center md:px-24">
-        <div className="grid-cols-1 text-left mt-16 md:mt-32">
-          <h1 className="text-3xl md:text-5xl font-bold text-white mb-6">
+      <div className="relative z-10 grid md:grid-cols-1 px-6 items-center justify-center h-full text-center md:px-24">
+        <div className=" mt-16 md:mt-32">
+          <h1 className="text-3xl md:text-5xl/14 font-bold md:w-[750px] md:mx-auto text-white mb-6 li">
             Bold, Investible Solutions for the Wellbeing of People and Planet
           </h1>
-          <Button variant="cyan" size="large" className="hover:bg-green-600 ">
+          <Button size="large" className="bg-[#2AAA8A] rounded-full uppercase">
             Contact Us to Get Started
           </Button>
         </div>

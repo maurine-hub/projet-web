@@ -99,5 +99,3 @@ export const OurVision = () => {
     </div>
   );
 };
-
-

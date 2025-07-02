@@ -1,32 +1,15 @@
+import HeroSection from "@/components/HeroSection";
+import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
 import Link from "next/link";
-import { Separator } from "@/components/ui/separator";
-
 
 export default function CaseStudiesPage() {
   return (
     <div>
-      <div className="relative w-full h-[450px] ">
-        <div className="absolute inset-0">
-          <Image
-            src="https://images.unsplash.com/photo-1747134392471-831ea9a48e1e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxMjZ8fHxlbnwwfHx8fHw%3D"
-            alt="Hero Image"
-            fill
-            className="object-cover rounded-bl-[200px] md:rounded-bl-[300px] h-screen"
-            priority
-          />
-        </div>
-
-        <div className="absolute inset-0 bg-black/30 rounded-bl-[200px] md:rounded-bl-[300px]" />
-
-        <div className="relative z-10 grid grid-cols-2 items-center justify-center h-full text-center px-24">
-          <div className="grid-cols-1 text-left mt-32">
-            <h1 className="capitalize text-3xl md:text-5xl font-bold text-white mb-6">
-              case studies
-            </h1>
-          </div>
-        </div>
-      </div>
+      <HeroSection
+        imageUrl="https://images.unsplash.com/photo-1747134392471-831ea9a48e1e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxMjZ8fHxlbnwwfHx8fHw%3D"
+        title="case studies"
+      />
 
       <div className="w-full sm:px-6 md:max-w-10/12 md:mx-auto my-24">
         <Partnerships />
@@ -74,14 +57,13 @@ const Partnerships = () => {
       subtitle: "Subtitle for Partner 2",
       link: "https://partner2.com",
     },
-     {
+    {
       image:
         "https://images.unsplash.com/photo-1749235936423-8434cd075fb6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw3NHx8fGVufDB8fHx8fA%3D%3D",
       title: "Description of Partner 1",
       subtitle: "Subtitle for Partner 1",
       link: "https://partner1.com",
     },
-    
   ];
 
   const PartnerCard = ({
@@ -101,8 +83,12 @@ const Partnerships = () => {
           <Image src={image} alt={title} fill objectFit="cover" />
         </div>
         <Link href={link} target="_blank" rel="noopener noreferrer">
-          <p className="text-center text-lg md:text-xl font-semibold text-gray-500 pt-6">{title}</p>
-          <p className="text-center text-sm md:text-lg text-gray-400 pt-1">{subtitle}</p>
+          <p className="text-center text-lg md:text-xl font-semibold text-gray-500 pt-6">
+            {title}
+          </p>
+          <p className="text-center text-sm md:text-lg text-gray-400 pt-1">
+            {subtitle}
+          </p>
         </Link>
       </div>
     );
@@ -121,7 +107,6 @@ const Partnerships = () => {
     </div>
   );
 };
-
 
 const FeaturedProjects = () => {
   const projects = [
@@ -160,14 +145,13 @@ const FeaturedProjects = () => {
       subtitle: "Subtitle for Partner 2",
       link: "https://partner2.com",
     },
-     {
+    {
       image:
         "https://images.unsplash.com/photo-1749235936423-8434cd075fb6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw3NHx8fGVufDB8fHx8fA%3D%3D",
       title: "Description of Partner 1",
       subtitle: "Subtitle for Partner 1",
       link: "https://partner1.com",
     },
-    
   ];
 
   const FeaturedCard = ({
@@ -187,8 +171,12 @@ const FeaturedProjects = () => {
           <Image src={image} alt={title} fill objectFit="cover" />
         </div>
         <Link href={link} target="_blank" rel="noopener noreferrer">
-          <p className="text-center text-lg md:text-xl font-semibold text-gray-500 pt-6">{title}</p>
-          <p className="text-center text-sm md:text-lg text-gray-400 pt-1">{subtitle}</p>
+          <p className="text-center text-lg md:text-xl font-semibold text-gray-500 pt-6">
+            {title}
+          </p>
+          <p className="text-center text-sm md:text-lg text-gray-400 pt-1">
+            {subtitle}
+          </p>
         </Link>
       </div>
     );

@@ -45,7 +45,7 @@ export function Footer() {
   };
 
   return (
-    <footer className=" flex flex-col items-center bg-[#035987] text-white">
+    <footer className=" flex flex-col items-center bg-[#088F8F] text-white">
       <div className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-6 leading-tight">
