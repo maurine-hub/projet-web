@@ -111,13 +111,13 @@ export default function TeamPage() {
     <div>
       <HeroSection
         imageUrl="https://images.unsplash.com/photo-1681949103006-70066fb25dfe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGdyb3VwZSUyMGQlMjBlcGVyc29ubmVzJTIwZGFucyUyMHVuJTIwYnVyZWF1fGVufDB8fDB8fHww"
-        title="Our team"
+        title="Notre équipe"
       />
 
       <div className="w-full max-sm:px-6 md:max-w-10/12 md:mx-auto py-24">
         <div>
           <h1 className="text-xl md:text-2xl font-bold text-gray-700 capitalize mb-6">
-            core team
+            équipe principale
           </h1>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
             {teamMembers.map((member, index) => (
@@ -127,7 +127,7 @@ export default function TeamPage() {
         </div>
         <div className="mt-10">
           <h1 className="text-xl md:text-2xl font-bold text-gray-700 capitalize mb-6">
-            affiliate staff
+            collaborateurs affiliés
           </h1>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
             {teamMembers.map((member, index) => (

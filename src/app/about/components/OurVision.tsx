@@ -53,40 +53,13 @@ export const OurVision = () => {
   );
   return (
     <div className="flex flex-col">
-      <div className="relative w-full h-[450px] ">
-        <div className="absolute inset-0">
-          <Image
-            src="https://images.unsplash.com/photo-1749370250800-4164aea78707?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw1OHx8fGVufDB8fHx8fA%3D%3D"
-            alt="Hero Image"
-            fill
-            className="object-cover rounded-bl-[200px] md:rounded-bl-[300px] h-screen"
-            priority
-          />
-        </div>
-
-        <div className="absolute inset-0 bg-black/30 rounded-bl-[200px] md:rounded-bl-[300px]" />
-
-        <div className="relative z-10 grid grid-cols-2 items-center justify-center h-full text-center px-24">
-          <div className="grid-cols-1 text-left mt-32">
-            <h1 className="capitalize text-3xl md:text-5xl font-bold text-white mb-6">
-              about us
-            </h1>
-          </div>
-        </div>
-      </div>
+     
       <div className="max-w-10/12 mx-auto  my-24">
         <h1 className="text-2xl md:text-4xl font-bold text-center mb-6">
-          Our Vision is to catalyze bold, investible solutions that unlock more
-          capital for a measurably healthier people and planet.​
+           Notre vision est de catalyser des solutions audacieuses et investissables qui libèrent plus de capitaux pour une planète et des personnes mesurablement en meilleure santé.
         </h1>
         <p className="text-base md:text-lg text-center text-gray-500 leading-relaxed max-w-4xl mx-auto">
-          At Quantified Ventures, we are committed to equity and inclusion in
-          our workplace and our work. By building inclusive and equitable
-          policies and principles, we are laying the foundation for various
-          backgrounds and perspectives to be heard, valued, and to shape our
-          organization and our project outcomes. This leads to stronger teams,
-          more impactful projects, and a track record that aligns with our
-          culture and values.{" "}
+          Chez Quantified Ventures, nous sommes engagés pour l’équité et l’inclusion dans notre environnement de travail et dans nos actions. En construisant des politiques et des principes inclusifs et équitables, nous posons les bases pour que des parcours et des perspectives variés soient entendus, valorisés et puissent façonner notre organisation et les résultats de nos projets. Cela conduit à des équipes plus solides, des projets plus impactants et un parcours en accord avec notre culture et nos valeurs.
         </p>
         <div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-6 mt-8">
