@@ -3,6 +3,8 @@
 import HeroSection from "@/components/HeroSection";
 import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
+import Image from "next/image";
+import { TestimoniesSection } from "@/components/TestimoniesSection";
 
 const services = [
   {

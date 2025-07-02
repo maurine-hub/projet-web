@@ -2,6 +2,7 @@ import HeroSection from "@/components/HeroSection";
 import { Separator } from "@/components/ui/separator";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Handshake, Leaf, Lightbulb, ShieldCheck } from "lucide-react";
+import Image from "next/image";
 
 export default function ValuesPage() {
   const valuesList = [
