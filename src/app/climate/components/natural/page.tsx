@@ -118,36 +118,21 @@ export default function NatrualPage() {
     <div>
       <HeroSection
         imageUrl="https://images.unsplash.com/photo-1749370250800-4164aea78707?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw1OHx8fGVufDB8fHx8fA%3D%3D"
-        title="Natural Climate Solutions"
+        title="Solutions climatiques naturelles"
       />
 
       <div className="w-full md:max-w-10/12 max-md:px-6 mx-auto py-16   md:py-20">
         <p className="text-base md:text-xl text-left text-gray-600 leading-relaxed my-6">
-          Our Community Finance team has deep expertise in supporting
-          communities, particularly under-resourced ones, with their drinking
-          water, wastewater, and stormwater infrastructure needs using public
-          financing mechanisms such as the State Revolving Funds (SRFs).
-          Quantified Ventures' hands-on experience in municipal finance, water
-          infrastructure project development, EPA program and regulatory
-          requirements, and the Clean and Drinking Water SRF application process
-          differentiates our team from other consulting firms and technical
-          assistance providers.{" "}
+         Notre équipe de Financement Communautaire possède une expertise approfondie dans l’accompagnement des communautés, en particulier celles sous-financées, pour leurs besoins en infrastructures d’eau potable, d’eaux usées et de gestion des eaux pluviales, en utilisant des mécanismes de financement public tels que les Fonds de Révolution d’État (SRF). L’expérience pratique de Quantified Ventures en finance municipale, développement de projets d’infrastructures hydrauliques, exigences réglementaires et programmes de l’EPA, ainsi que dans le processus de demande des SRF pour l’eau propre et potable, distingue notre équipe des autres cabinets de conseil et prestataires d’assistance technique.
         </p>
         <p className="text-base md:text-xl text-left text-gray-600 leading-relaxed ">
-          Additionally, we support communities through completing the expanse of
-          federal funding requirements (crosscutters) including environmental
-          (NEPA) reviews, Single Audit Act, Davis Bacon Wage Act, Build America,
-          Buy America (BABA), American Iron and Steel (AIS), and Disadvantaged
-          Business Enterprise. This, combined with the team's knowledge and
-          track record of partnering with other funders to leverage public
-          resources, enables the most economically distressed communities to
-          meet water infrastructure improvement goals more affordably.
+          De plus, nous accompagnons les communautés dans la gestion de l’ensemble des exigences fédérales de financement (crosscutters), y compris les examens environnementaux (NEPA), le Single Audit Act, le Davis Bacon Wage Act, Build America, Buy America (BABA), American Iron and Steel (AIS), et les entreprises défavorisées (Disadvantaged Business Enterprise). Cette expertise, combinée à la capacité de notre équipe à collaborer avec d’autres bailleurs pour mobiliser des ressources publiques, permet aux communautés les plus économiquement fragiles d’atteindre leurs objectifs d’amélioration des infrastructures hydrauliques à moindre coût.
         </p>
         <Separator className="h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent mt-10" />
         <Services />
         <News />
         <h1 className="text-xl md:text-3xl text-left font-bold text-gray-700 capitalize my-10">
-          Representative Partnerships and Projects
+          Partenariats et projets représentatifs
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  gap-6">
           {partnerships.map((solution, index) => (

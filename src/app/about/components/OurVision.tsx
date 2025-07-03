@@ -53,13 +53,21 @@ export const OurVision = () => {
   );
   return (
     <div className="flex flex-col">
-     
       <div className="max-w-10/12 mx-auto  my-24">
         <h1 className="text-2xl md:text-4xl font-bold text-center mb-6">
-           Notre vision est de catalyser des solutions audacieuses et investissables qui libèrent plus de capitaux pour une planète et des personnes mesurablement en meilleure santé.
+          Notre vision est de catalyser des solutions audacieuses et
+          investissables qui libèrent plus de capitaux pour une planète et des
+          personnes mesurablement en meilleure santé.
         </h1>
         <p className="text-base md:text-lg text-center text-gray-500 leading-relaxed max-w-4xl mx-auto">
-          Chez Quantified Ventures, nous sommes engagés pour l’équité et l’inclusion dans notre environnement de travail et dans nos actions. En construisant des politiques et des principes inclusifs et équitables, nous posons les bases pour que des parcours et des perspectives variés soient entendus, valorisés et puissent façonner notre organisation et les résultats de nos projets. Cela conduit à des équipes plus solides, des projets plus impactants et un parcours en accord avec notre culture et nos valeurs.
+          Chez Quantified Ventures, nous sommes engagés pour l’équité et
+          l’inclusion dans notre environnement de travail et dans nos actions.
+          En construisant des politiques et des principes inclusifs et
+          équitables, nous posons les bases pour que des parcours et des
+          perspectives variés soient entendus, valorisés et puissent façonner
+          notre organisation et les résultats de nos projets. Cela conduit à des
+          équipes plus solides, des projets plus impactants et un parcours en
+          accord avec notre culture et nos valeurs.
         </p>
         <div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-6 mt-8">

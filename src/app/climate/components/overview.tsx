@@ -18,17 +18,13 @@ export const Overview = () => {
 
       <div className="max-w-10/12 mx-auto my-16">
         <h1 className="capitalize text-2xl md:text-4xl font-bold text-center text-gray-700 mt-24 mb-6">
-          overview
+          aperçu
         </h1>
         <p className="text-base md:text-xl text-left text-gray-600 leading-relaxed ">
-          Quantified Ventures &apos; Climate Finance team partners with
-          communities; federal, state, and local governments; corporations;
-          philanthropy, and non-profit organizations from all sectors to deliver
-          clean water, climate mitigation, and community resilience solutions to
-          improve the wellbeing of people and planet.{" "}
+          L’équipe Financement Climat de Quantified Ventures collabore avec les communautés, les gouvernements fédéraux, étatiques et locaux, les entreprises, la philanthropie et les organisations à but non lucratif de tous secteurs pour fournir des solutions d’eau propre, d’atténuation du changement climatique et de résilience communautaire afin d’améliorer le bien-être des personnes et de la planète.
         </p>
         <p className="text-base md:text-xl text-left text-gray-600 leading-relaxed my-6">
-          Our work is centered around four solutions:{" "}
+           Notre travail s’articule autour de quatre solutions :
         </p>
         {orderList.map((item, index) => (
           <ul className="list-disc pl-6 text-gray-600" key={index}>
@@ -38,9 +34,7 @@ export const Overview = () => {
           </ul>
         ))}
         <p className="text-base md:text-xl text-left text-gray-600 leading-relaxed my-4">
-          Across these solutions, we focus on solving systems-level problems and
-          accelerating climate smart investments through partnership, finance,
-          and policy innovation.
+          À travers ces solutions, nous nous concentrons sur la résolution de problèmes systémiques et l’accélération des investissements climatiques intelligents grâce au partenariat, au financement et à l’innovation politique.
         </p>
       </div>
       <Separator className="h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent mt-10" />
