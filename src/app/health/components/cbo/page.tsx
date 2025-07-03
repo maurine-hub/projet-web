@@ -10,16 +10,16 @@ const services = [
   {
     image: "/images/service1.jpg",
     description:
-      "Evaluate and access public funding and financing for climate and water projects",
+      "Évaluer et accéder aux financements publics pour les projets liés au climat et à l’eau",
   },
   {
     image: "/images/service2.jpg",
-    description: "Develop and implement water infrastructure projects",
+    description: "Développer et mettre en œuvre des projets d’infrastructures hydrauliques",
   },
   {
     image: "/images/service3.jpg",
     description:
-      "Assist communities with the application process for federal funding requirements",
+      "Accompagner les communautés dans le processus de demande de financements fédéraux",
   },
 ];
 
@@ -122,31 +122,15 @@ export default function CboPage() {
     <div>
       <HeroSection
         imageUrl="https://images.unsplash.com/photo-1745874864678-f464940bb513?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw1Mnx8fGVufDB8fHx8fA%3D%3D"
-        title={`Community-Based Organization 
-Sustainability Solutions`}
+        title={`Solutions de durabilité pour les organisations communautaires`}
       />
 
       <div className="w-full md:max-w-10/12 max-md:px-6 mx-auto py-16   md:py-20">
         <p className="text-base md:text-xl text-left text-gray-600 leading-relaxed my-6">
-          Our Community Finance team has deep expertise in supporting
-          communities, particularly under-resourced ones, with their drinking
-          water, wastewater, and stormwater infrastructure needs using public
-          financing mechanisms such as the State Revolving Funds (SRFs).
-          Quantified Ventures' hands-on experience in municipal finance, water
-          infrastructure project development, EPA program and regulatory
-          requirements, and the Clean and Drinking Water SRF application process
-          differentiates our team from other consulting firms and technical
-          assistance providers.{" "}
+          Notre équipe de Financement Communautaire possède une expertise approfondie dans l’accompagnement des communautés, en particulier celles sous-financées, pour leurs besoins en infrastructures d’eau potable, d’eaux usées et de gestion des eaux pluviales, en utilisant des mécanismes de financement public tels que les Fonds de Révolution d’État (SRF). L’expérience pratique de Quantified Ventures en finance municipale, développement de projets d’infrastructures hydrauliques, exigences réglementaires et programmes de l’EPA, ainsi que dans le processus de demande des SRF pour l’eau propre et potable, distingue notre équipe des autres cabinets de conseil et prestataires d’assistance technique.
         </p>
         <p className="text-base md:text-xl text-left text-gray-600 leading-relaxed ">
-          Additionally, we support communities through completing the expanse of
-          federal funding requirements (crosscutters) including environmental
-          (NEPA) reviews, Single Audit Act, Davis Bacon Wage Act, Build America,
-          Buy America (BABA), American Iron and Steel (AIS), and Disadvantaged
-          Business Enterprise. This, combined with the team's knowledge and
-          track record of partnering with other funders to leverage public
-          resources, enables the most economically distressed communities to
-          meet water infrastructure improvement goals more affordably.
+         De plus, nous accompagnons les communautés dans la gestion de l’ensemble des exigences fédérales de financement (crosscutters), y compris les examens environnementaux (NEPA), le Single Audit Act, le Davis Bacon Wage Act, Build America, Buy America (BABA), American Iron and Steel (AIS), et les entreprises défavorisées (Disadvantaged Business Enterprise). Cette expertise, combinée à la capacité de notre équipe à collaborer avec d’autres bailleurs pour mobiliser des ressources publiques, permet aux communautés les plus économiquement fragiles d’atteindre leurs objectifs d’amélioration des infrastructures hydrauliques à moindre coût.
         </p>
         <Separator className="h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent mt-10" />
 
@@ -170,7 +154,7 @@ Sustainability Solutions`}
         </div>
 
         <h1 className="text-xl md:text-3xl text-left font-bold text-gray-700 capitalize my-10">
-          Representative Partnerships and Projects
+          Partenariats et projets représentatifs
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  gap-6">
           {solutionsList.map((solution, index) => (
@@ -186,18 +170,7 @@ Sustainability Solutions`}
             height={200}
           />
           <p className="text-base md:text-lg text-center text-gray-600 my-4 leading-relaxed mt-10">
-            QV worked with the Maryland Food Bank to design a home delivered
-            grocery program in Baltimore, Md., which has notoriously low access
-            to quality grocery stores. The ad hoc response to address food
-            insecurity in the first 2 years of the Covid-19 pandemic, combined
-            with elevated demand, left many smaller community-based
-            organizations stretched too thin to meet the need in a sustainable
-            way. We completed an assessment of the Baltimore food assistance
-            environment to identify opportunities and potential partnerships,
-            then worked with Maryland Food Bank to develop a program design and
-            operating model that leverages healthcare and workforce outcomes
-            payments along with other novel payment streams to create a
-            financially sustainable program.
+           QV a travaillé avec la Maryland Food Bank pour concevoir un programme de livraison de courses à domicile à Baltimore, dans le Maryland, où l’accès à des magasins d’alimentation de qualité est notoirement faible. La réponse ad hoc à l’insécurité alimentaire pendant les deux premières années de la pandémie de Covid-19, combinée à une demande accrue, a laissé de nombreuses petites organisations communautaires dans l’incapacité de répondre durablement aux besoins. Nous avons réalisé une évaluation de l’environnement de l’aide alimentaire à Baltimore afin d’identifier les opportunités et les partenariats potentiels, puis travaillé avec la Maryland Food Bank pour développer un modèle de programme et d’exploitation qui s’appuie sur les paiements liés aux résultats en matière de santé et d’emploi, ainsi que sur d’autres sources de financement innovantes, pour créer un programme financièrement durable.
           </p>
         </div>
         <TestimoniesSection testimonies={testimonials} />

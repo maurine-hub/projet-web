@@ -92,23 +92,13 @@ export const OverviewHealth = () => {
     <div className="flex flex-col">
       <div>
         <h1 className="capitalize text-2xl md:text-4xl font-bold text-left text-gray-700 mt-24 mb-6">
-          overview
+          aperçu
         </h1>
         <p className="text-base md:text-xl text-left items-start text-gray-600 leading-relaxed ">
-          Health is the product of many factors, only some of which are driven
-          by healthcare. Yet we continue to pay more every year for medical care
-          while consistently under investing in the human and social services
-          with the greatest potential to prevent illness and improve individual
-          and population health. Absent greater attention and resourcing for
-          upstream solutions that address health-related social needs, we
-          individually and collectively suffer the consequences.
+         La santé est le résultat de nombreux facteurs, dont seuls certains sont liés aux soins médicaux. Pourtant, nous continuons à payer chaque année davantage pour les soins médicaux tout en sous-investissant systématiquement dans les services humains et sociaux qui ont le plus grand potentiel pour prévenir les maladies et améliorer la santé individuelle et collective. Sans une attention et des ressources accrues pour des solutions en amont qui répondent aux besoins sociaux liés à la santé, nous en subissons individuellement et collectivement les conséquences.
         </p>
         <p className="text-base md:text-xl text-left font-bold text-neutral-600 leading-relaxed my-6">
-          Our Health and Human Services group creates the conditions for
-          healthcare organizations and community-based service providers to
-          build robust business partnerships that deliver sustainable solutions
-          – improving health outcomes, addressing health disparities, and
-          lowering costs at scale.{" "}
+        Notre groupe Santé et Services Sociaux crée les conditions permettant aux organisations de santé et aux prestataires de services communautaires de construire des partenariats solides qui offrent des solutions durables – améliorant les résultats de santé, réduisant les disparités et diminuant les coûts à grande échelle.
         </p>
       </div>
 

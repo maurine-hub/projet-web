@@ -87,10 +87,7 @@ export const Applications = () => {
         Applications
       </h1>
       <p className="text-base md:text-xl text-gray-600 leading-relaxed ">
-        Whether working on behalf of healthcare organizations or non-profit
-        service providers, we have supported sustainable program development and
-        expanded service capacity across a range of health-related social needs,
-        including:{" "}
+       Que ce soit pour le compte d’organisations de santé ou de prestataires de services à but non lucratif, nous avons soutenu le développement de programmes durables et élargi la capacité de service sur un large éventail de besoins sociaux liés à la santé, notamment :
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-36 mt-16">
         <Image src="/images/logo1.png" alt="" width={250} height={250} />

@@ -69,7 +69,7 @@ const SolutionCard = ({
 );
 
 export default function NatrualPage() {
-   const testimonials = [
+  const testimonials = [
     {
       image:
         "https://images.unsplash.com/photo-1681949103006-70066fb25dfe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGdyb3VwZSUyMGQlMjBlcGVyc29ubmVzJTIwZGFucyUyMHVuJTIwYnVyZWF1fGVufDB8fDB8fHww",
@@ -123,10 +123,29 @@ export default function NatrualPage() {
 
       <div className="w-full md:max-w-10/12 max-md:px-6 mx-auto py-16   md:py-20">
         <p className="text-base md:text-xl text-left text-gray-600 leading-relaxed my-6">
-         Notre équipe de Financement Communautaire possède une expertise approfondie dans l’accompagnement des communautés, en particulier celles sous-financées, pour leurs besoins en infrastructures d’eau potable, d’eaux usées et de gestion des eaux pluviales, en utilisant des mécanismes de financement public tels que les Fonds de Révolution d’État (SRF). L’expérience pratique de Quantified Ventures en finance municipale, développement de projets d’infrastructures hydrauliques, exigences réglementaires et programmes de l’EPA, ainsi que dans le processus de demande des SRF pour l’eau propre et potable, distingue notre équipe des autres cabinets de conseil et prestataires d’assistance technique.
+          Notre équipe de Financement Communautaire possède une expertise
+          approfondie dans l’accompagnement des communautés, en particulier
+          celles sous-financées, pour leurs besoins en infrastructures d’eau
+          potable, d’eaux usées et de gestion des eaux pluviales, en utilisant
+          des mécanismes de financement public tels que les Fonds de Révolution
+          d’État (SRF). L’expérience pratique de Quantified Ventures en finance
+          municipale, développement de projets d’infrastructures hydrauliques,
+          exigences réglementaires et programmes de l’EPA, ainsi que dans le
+          processus de demande des SRF pour l’eau propre et potable, distingue
+          notre équipe des autres cabinets de conseil et prestataires
+          d’assistance technique.
         </p>
         <p className="text-base md:text-xl text-left text-gray-600 leading-relaxed ">
-          De plus, nous accompagnons les communautés dans la gestion de l’ensemble des exigences fédérales de financement (crosscutters), y compris les examens environnementaux (NEPA), le Single Audit Act, le Davis Bacon Wage Act, Build America, Buy America (BABA), American Iron and Steel (AIS), et les entreprises défavorisées (Disadvantaged Business Enterprise). Cette expertise, combinée à la capacité de notre équipe à collaborer avec d’autres bailleurs pour mobiliser des ressources publiques, permet aux communautés les plus économiquement fragiles d’atteindre leurs objectifs d’amélioration des infrastructures hydrauliques à moindre coût.
+          De plus, nous accompagnons les communautés dans la gestion de
+          l’ensemble des exigences fédérales de financement (crosscutters), y
+          compris les examens environnementaux (NEPA), le Single Audit Act, le
+          Davis Bacon Wage Act, Build America, Buy America (BABA), American Iron
+          and Steel (AIS), et les entreprises défavorisées (Disadvantaged
+          Business Enterprise). Cette expertise, combinée à la capacité de notre
+          équipe à collaborer avec d’autres bailleurs pour mobiliser des
+          ressources publiques, permet aux communautés les plus économiquement
+          fragiles d’atteindre leurs objectifs d’amélioration des
+          infrastructures hydrauliques à moindre coût.
         </p>
         <Separator className="h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent mt-10" />
         <Services />
@@ -190,7 +209,6 @@ function Services() {
     </div>
   );
 }
-
 
 type NewsItem = {
   image: string;
