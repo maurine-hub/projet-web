@@ -6,10 +6,15 @@ import { Button } from "@/components/ui/button";
 import React, { useState } from "react";
 import { Users, Target, TrendingUp, Play } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
+import HeroSection from "@/components/HeroSection";
 
 export default function Home() {
   return (
     <div className="w-full bg-gray-100">
+      {/* <HeroSection 
+        imageUrl="/images/GreenOcity-home.png"
+        title="GreenOcity, l'approche révolutionnaire dans le financement environnemental urbain"
+      /> */}
       <Hero />
       <ServicesSection />
       <QuantifiedVenturesPage />
@@ -26,7 +31,7 @@ function Hero() {
     <div className="relative w-full h-[270px] md:h-[600px]">
       <div className="absolute inset-0">
         <Image
-          src="https://images.unsplash.com/photo-1695019947916-c3e789ba0e2b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGJlbGxlJTIwaW1hZ2UlMjBkZSUyMGxhJTIwbmF0dXJlfGVufDB8fDB8fHww"
+          src="/images/GreenOcity-home.png"
           alt="Hero Image"
           fill
           className="object-cover rounded-br-[200px] md:rounded-br-[300px] md:rounded-bl-[300px] h-screen"
@@ -34,15 +39,16 @@ function Hero() {
         />
       </div>
 
-      <div className="absolute inset-0 bg-black/30 rounded-br-[200px] md:rounded-br-[300px] md:rounded-bl-[300px]" />
+      <div className="absolute inset-0 bg-black/30 rounded-br-[200px] md:rounded-br-[300px] md:rounded-bl-[300px] " />
 
       <div className="relative z-10 grid md:grid-cols-1 px-6 items-center justify-center h-full text-center md:px-24">
         <div className=" mt-16 md:mt-32">
           <h1 className="text-3xl md:text-5xl/14 font-bold md:w-[750px] md:mx-auto text-white mb-6 li">
-            Bold, Investible Solutions for the Wellbeing of People and Planet
+            Une approche révolutionnaire dans le financement environnemental
+            urbain
           </h1>
           <Button size="large" className="bg-[#2AAA8A] rounded-full uppercase">
-            Contact Us to Get Started
+            Contacez-nous pour démarrer
           </Button>
         </div>
       </div>
@@ -95,15 +101,18 @@ function ServicesSection() {
       <div className="max-w-11/12 mx-auto">
         <div className="text-center max-w-5xl mx-auto mb-16 ">
           <h2 className="text-xl sm:text-xl lg:text-2xl font-bold text-gray-600 mb-6 lg:mb-8 leading-tight">
-            QVentures designs, capitalizes, and scales investible solutions to
-            address the most pressing challenges facing communities.
+            QVentures conçoit, capitalise et développe des solutions
+            investissables pour relever les défis les plus pressants auxquels
+            sont confrontées les communautés.
           </h2>
 
           <p className="text-lg text-gray-600 leading-relaxed max-w-4xl mx-auto">
-            We work with pioneers and change makers to catalyze impact for the
-            greater good by pulling the levers of data, finance, innovation,
-            partnerships, and policy to develop bold solutions that produce
-            verified environmental and social outcomes.
+            Nous travaillons avec des pionniers et des acteurs du changement
+            pour catalyser l’impact au service du bien commun en actionnant les
+            leviers de la donnée, de la finance, de l’innovation, des
+            partenariats et des politiques afin de développer des solutions
+            audacieuses qui produisent des résultats environnementaux et sociaux
+            vérifiés.
           </p>
         </div>
 
@@ -131,12 +140,12 @@ function ServicesSection() {
                     {service.descriptionKey}
                   </p>
 
-                  <div
+                  {/* <div
                     className={`w-12 h-1 ${service.color.replace(
                       "text-",
                       "bg-"
                     )} rounded-full mx-auto mt-6 group-hover:w-16 transition-all duration-300`}
-                  ></div>
+                  ></div> */}
                 </div>
               </div>
             );
@@ -157,13 +166,15 @@ function QuantifiedVenturesPage() {
       <div className="container mx-auto px-4 py-8 md:py-16">
         <div className="max-w-4xl mx-auto text-center mb-12 md:mb-16">
           <h1 className="text-lg md:text-xl lg:text-3xl font-bold text-white mb-6 md:mb-8 leading-tight">
-            We work with innovators, risk takers, pragmatists, and optimists.
+            Nous travaillons avec des innovateurs, des preneurs de risques, des
+            pragmatiques et des optimistes.
           </h1>
           <p className="text-base md:text-lg text-gray-50 leading-relaxed max-w-5xl mx-auto">
-            Quantified Ventures builds trusted partnerships with key public and
-            private stakeholders to structure outcomes-based transactions and
-            drive capital toward groundbreaking solutions and promising
-            innovations across the environmental, health, and social sectors.
+            Quantified Ventures construit des partenariats de confiance avec les
+            parties prenantes publiques et privées clés pour structurer des
+            transactions basées sur les résultats et orienter les capitaux vers
+            des solutions révolutionnaires et des innovations prometteuses dans
+            les secteurs environnemental, sanitaire et social.
           </p>
         </div>
 
@@ -213,22 +224,22 @@ type PropsCard = {
 function SolutionsSections() {
   const climateFinanceSolutions = [
     {
-      title: "Community Finance",
+      title: "Financement communautaire",
       image:
         "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=250&fit=crop&crop=center",
     },
     {
-      title: "Green Banks and Climate Resilience",
+      title: "Banques vertes et résilience climatique",
       image:
         "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=400&h=250&fit=crop&crop=center",
     },
     {
-      title: "Natural Climate Solutions",
+      title: "Solutions climatiques naturelles",
       image:
         "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400&h=250&fit=crop&crop=center",
     },
     {
-      title: "Outdoor Recreation",
+      title: "Loisirs de plein air",
       image:
         "https://images.unsplash.com/photo-1551632811-561732d1e306?w=400&h=250&fit=crop&crop=center",
     },
@@ -236,22 +247,22 @@ function SolutionsSections() {
 
   const healthSolutions = [
     {
-      title: "Community-Based Organization Sustainability Solutions",
+      title: "Solutions de durabilité pour les organisations communautaires",
       image:
         "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=250&fit=crop&crop=center",
     },
     {
-      title: "Managed Care Organization Market Growth",
+      title: "Croissance du marché des organisations de soins gérés",
       image:
         "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&h=250&fit=crop&crop=center",
     },
     {
-      title: "SDOH Strategy and Financing",
+      title: "Stratégie SDOH et financement à grande échelle",
       image:
         "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=400&h=250&fit=crop&crop=center",
     },
     {
-      title: "State Medicaid Innovation",
+      title: "Innovation Medicaid au niveau de l’État",
       image:
         "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=250&fit=crop&crop=center",
     },
@@ -282,7 +293,7 @@ function SolutionsSections() {
       <div className="container mx-auto px-4">
         <div className="mb-8">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-700 text-center mb-8">
-            Climate Finance Solutions
+            Solutions de financement climatique
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -294,7 +305,7 @@ function SolutionsSections() {
 
         <div>
           <h2 className="text-3xl md:text-3xl font-bold text-gray-700 text-center mb-8">
-            Health and Human Services Solutions
+            Solutions santé et services sociaux
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -324,25 +335,28 @@ function News() {
     {
       image:
         "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&h=250&fit=crop&crop=center",
-      title: "Quantified Ventures Launches New Climate Finance Solutions",
+      title:
+        "Quantified Ventures lance de nouvelles solutions de financement climatique",
       description:
-        "Broadband internet and water systems may seem like an odd pairing, but they’re inseparable when it comes to tackling challenges like aging infrastructure, workforce shortages, and the growing impacts of climate change. As affordability becomes an even greater concern, reliable fiber optic broadband offers a transformative solution to modernize water systems, enhance efficiency, and bridge urban-rural divides. ",
+        "L’internet haut débit et les systèmes d’eau peuvent sembler être un duo improbable, mais ils sont indissociables pour relever les défis tels que le vieillissement des infrastructures, la pénurie de main-d’œuvre et les impacts croissants du changement climatique. Alors que l’accessibilité devient une préoccupation majeure, la fibre optique fiable offre une solution transformatrice pour moderniser les systèmes d’eau, améliorer l’efficacité et réduire la fracture entre zones urbaines et rurales. ",
       link: "#",
     },
     {
       image:
         "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?w=400&h=250&fit=crop&crop=center",
-      title: "Innovative Health Solutions for Community Wellbeing",
+      title:
+        "Des solutions innovantes pour la santé et le bien-être des communautés",
       description:
-        "As Quantified Ventures celebrates 10 years of pioneering work developing novel solutions to improve the well-being of people and planet, we look back at some of our notable achievements and look ahead to how we are building for the future with new partnerships, projects, and innovations. Learn more about how QV’s top-notch team continues to think big, collaborate with bold pioneers, and implement investible solutions that drive measurable outcomes.",
+        "Alors que Quantified Ventures célèbre 10 ans de travail pionnier pour améliorer le bien-être des personnes et de la planète, nous revenons sur certaines de nos réalisations marquantes et nous tournons vers l’avenir avec de nouveaux partenariats, projets et innovations. Découvrez comment l’équipe QV continue de voir grand, de collaborer avec des pionniers audacieux et de mettre en œuvre des solutions investissables qui génèrent des résultats mesurables.",
       link: "#",
     },
     {
       image:
         "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?w=400&h=250&fit=crop&crop=center",
-      title: "Partnerships Driving Impact in Environmental Sectors",
+      title:
+        "Des partenariats qui génèrent de l’impact dans les secteurs environnementaux",
       description:
-        "CEO Tee Thomas reflects back on 2024, her first year as CEO and QV's 10th year of breaking through barriers to drive impact for people and planet.",
+        "La PDG Tee Thomas revient sur 2024, sa première année en tant que PDG et la 10e année de QV à franchir des barrières pour générer de l’impact pour les personnes et la planète.",
       link: "#",
     },
   ];
@@ -367,7 +381,7 @@ function News() {
             href={link}
             className="text-cyan-600 hover:text-cyan-700 transition-colors"
           >
-            Read more
+            Lire la suite
           </a>
         </div>
       </div>
@@ -377,7 +391,7 @@ function News() {
   return (
     <div className="flex flex-col items-center justify-center w-full md:max-w-11/12 mx-auto pb-10 md:pb-16 px-4">
       <h1 className="capitalize text-2xl md:text-4xl font-bold text-gray-700">
-        Quantified ventures news
+        Actualités Quantified Ventures
       </h1>
       <div className="flex flex-col mt-10">
         {latestNews.map((news, index) => (
@@ -387,7 +401,6 @@ function News() {
         ))}
       </div>
       <Separator className="h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent mt-10" />
-      
     </div>
   );
 }
@@ -395,101 +408,157 @@ function News() {
 function OurWork() {
   const workList = [
     {
-      image: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?w=400&h=250&fit=crop&crop=center",
-      title: "Innovative Health Solutions for Community Wellbeing",
+      image:
+        "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?w=400&h=250&fit=crop&crop=center",
+      title:
+        "Des solutions innovantes pour la santé et le bien-être des communautés",
       link: "#",
     },
     {
-      image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&h=250&fit=crop&crop=center",
-      title: "Quantified Ventures Launches New Climate Finance Solutions",
+      image:
+        "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&h=250&fit=crop&crop=center",
+      title:
+        "Quantified Ventures lance de nouvelles solutions de financement climatique",
       link: "#",
     },
     {
-      image: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?w=400&h=250&fit=crop&crop=center",
-      title: "Partnerships Driving Impact in Environmental Sectors",
-      link: "#",  
-    },
-    {
-      image: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?w=400&h=250&fit=crop&crop=center",
-      title: "Innovative Health Solutions for Community Wellbeing",
+      image:
+        "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?w=400&h=250&fit=crop&crop=center",
+      title:
+        "Des partenariats qui génèrent de l’impact dans les secteurs environnementaux",
       link: "#",
     },
     {
-      image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&h=250&fit=crop&crop=center",
-      title: "Quantified Ventures Launches New Climate Finance Solutions",
+      image:
+        "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?w=400&h=250&fit=crop&crop=center",
+      title:
+        "Des solutions innovantes pour la santé et le bien-être des communautés",
       link: "#",
     },
     {
-      image: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?w=400&h=250&fit=crop&crop=center",
-      title: "Partnerships Driving Impact in Environmental Sectors",
-      link: "#",  
-    }
+      image:
+        "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&h=250&fit=crop&crop=center",
+      title:
+        "Quantified Ventures lance de nouvelles solutions de financement climatique",
+      link: "#",
+    },
+    {
+      image:
+        "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?w=400&h=250&fit=crop&crop=center",
+      title:
+        "Des partenariats qui génèrent de l’impact dans les secteurs environnementaux",
+      link: "#",
+    },
   ];
 
-  const RenderWorkItem = ({ image, title, link }: { image: string, title: string, link: string }) => {
-    return(
+  const RenderWorkItem = ({
+    image,
+    title,
+    link,
+  }: {
+    image: string;
+    title: string;
+    link: string;
+  }) => {
+    return (
       <div className="flex flex-col w-full items-center  ">
-        <Image src={image} alt={title} width={500} height={250} objectFit="cover" />
+        <Image
+          src={image}
+          alt={title}
+          width={500}
+          height={250}
+          objectFit="cover"
+        />
         <p className="text-base text-gray-500 pt-2">{title}</p>
       </div>
-    )
-  }
+    );
+  };
 
-  return(
+  return (
     <div className="flex flex-col w-full jusct-center items-center  md:max-w-9/12 mx-auto pb-16 px-4">
-      <h1 className="capitalize text-2xl md:text-4xl font-bold text-gray-700">Our work in action</h1>
-      <p className="text-lg md:text-xl text-gray-500 text-center py-6">By incentivizing collaboration, measuring and monetizing key outcomes, and engaging subject matter experts in solution design and development we chart the course to innovation, investment, and impact. </p>
+      <h1 className="capitalize text-2xl md:text-4xl font-bold text-gray-700">
+        Nos réalisations
+      </h1>
+      <p className="text-lg md:text-xl text-gray-500 text-center py-6">
+        En encourageant la collaboration, en mesurant et en monétisant les
+        résultats clés, et en impliquant des experts dans la conception et le
+        développement de solutions, nous traçons la voie vers l’innovation,
+        l’investissement et l’impact.{" "}
+      </p>
       <div className="grid grid-cols-1 md:grid-cols-2  gap-6">
         {workList.map((work, index) => (
           <RenderWorkItem key={index} {...work} />
         ))}
       </div>
     </div>
-  )
+  );
 }
 
-function Benefits () {
+function Benefits() {
   const benefitsList = [
     {
-      image: "https://images.unsplash.com/photo-1689757762690-2f09ec1b7228?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw0fHx8ZW58MHx8fHx8",
+      image:
+        "https://images.unsplash.com/photo-1689757762690-2f09ec1b7228?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw0fHx8ZW58MHx8fHx8",
       title: "Conseils",
-      description: "Nous évaluons la faisabilité d'entreprendre un financement basé sur les résultats et des solutions de financement, et concevons des structures novatrices pour résoudre des défis environnementaux, sanitaires et sociaux prolongés.",
+      description:
+        "Nous évaluons la faisabilité d'entreprendre un financement basé sur les résultats et des solutions de financement, et concevons des structures novatrices pour résoudre des défis environnementaux, sanitaires et sociaux prolongés.",
     },
     {
-      image: "https://images.unsplash.com/photo-1749482843703-3895960e7d63?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyfHx8ZW58MHx8fHx8",
+      image:
+        "https://images.unsplash.com/photo-1749482843703-3895960e7d63?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyfHx8ZW58MHx8fHx8",
       title: "Développement de Projets",
-      description: "En travaillant avec des partenaires gouvernementaux, associatifs et corporatifs, nous développons des programmes et projets qui créent des bénéfices environnementaux, sanitaires et sociaux pour les personnes et les écosystèmes.",
+      description:
+        "En travaillant avec des partenaires gouvernementaux, associatifs et corporatifs, nous développons des programmes et projets qui créent des bénéfices environnementaux, sanitaires et sociaux pour les personnes et les écosystèmes.",
     },
     {
-      image: "https://images.unsplash.com/photo-1695019947916-c3e789ba0e2b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGJlbGxlJTIwaW1hZ2UlMjBkZSUyMGxhJTIwbmF0dXJlfGVufDB8fDB8fHww",
+      image:
+        "https://images.unsplash.com/photo-1695019947916-c3e789ba0e2b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGJlbGxlJTIwaW1hZ2UlMjBkZSUyMGxhJTIwbmF0dXJlfGVufDB8fDB8fHww",
       title: "Capitalisation",
-      description: "Nous offrons des solutions de financement et de fonds créatives pour les organisations publiques et privées cherchant des investisseurs et souhaitant utiliser des approches basées sur les résultats pour résoudre des problèmes environnementaux, sanitaires et sociaux critiques.",
+      description:
+        "Nous offrons des solutions de financement et de fonds créatives pour les organisations publiques et privées cherchant des investisseurs et souhaitant utiliser des approches basées sur les résultats pour résoudre des problèmes environnementaux, sanitaires et sociaux critiques.",
     },
   ];
 
-  const RenderBenefitItem = ({ image, title, description }: { image: string, title: string, description: string }) => {
-    return(
+  const RenderBenefitItem = ({
+    image,
+    title,
+    description,
+  }: {
+    image: string;
+    title: string;
+    description: string;
+  }) => {
+    return (
       <div className="flex flex-col w-full items-start  ">
         <div className="relative rounded-bl-2xl rounded-tr-2xl w-full h-64 overflow-hidden">
-          <Image src={image} alt={title} fill className="w-full h-full object-cover" />
+          <Image
+            src={image}
+            alt={title}
+            fill
+            className="w-full h-full object-cover"
+          />
         </div>
-        <h3 className="text-lg md:text-2xl font-bold text-cyan-800 py-4">{title}</h3>
+        <h3 className="text-lg md:text-2xl font-bold text-cyan-800 py-4">
+          {title}
+        </h3>
         <p className="text-base md:text-lg text-gray-500 pt-2">{description}</p>
       </div>
-    )
-  }
+    );
+  };
 
-  return(
+  return (
     <div className="flex flex-col w-full jusct-center items-center max-w-11/12 mx-auto pb-16 px-4  md:mt-10">
-      <h1 className="capitalize text-2xl md:text-4xl font-bold text-gray-700">Benefits of Outcomes-Based Finance</h1>
+      <h1 className="capitalize text-2xl md:text-4xl font-bold text-gray-700">
+        Benefits of Outcomes-Based Finance
+      </h1>
       <div className="grid grid-cols-1 md:grid-cols-3 mt-6 md:mt-12 gap-6">
         {benefitsList.map((benefit, index) => (
           <RenderBenefitItem key={index} {...benefit} />
         ))}
       </div>
       <Button variant="cyan" size="large" className="mt-10">
-        More News
+        Plus d’actualités
       </Button>
     </div>
-  )
+  );
 }
